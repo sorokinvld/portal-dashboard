@@ -26,28 +26,28 @@
           <!-- Umbrel update notification -->
           <transition name="notification-transition" appear>
             <notification v-if="availableUpdate.version" :text="Версия `Umbrel ${availableUpdate.version} доступна для установки`">
-              <b-button @click.prevent="confirmUpdate" variant="alert-glass" size="sm" class="px-2 px-sm-3 mr-2 mr-sm-3" pill>View</b-button>
+              <b-button @click.prevent="confirmUpdate" variant="alert-glass" size="sm" class="px-2 px-sm-3 mr-2 mr-sm-3" pill>Показать</b-button>
             </notification>
           </transition>
 
           <!-- Low RAM notification -->
           <transition name="notification-transition" appear>
             <notification v-if="isRunningLowOnRam" text="Недостаточно оперативной памяти">
-              <router-link to="/settings#ram" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>View</router-link>
+              <router-link to="/settings#ram" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>Показать</router-link>
             </notification>
           </transition>
 
           <!-- Low storage notification -->
           <transition name="notification-transition" appear>
             <notification v-if="isRunningLowOnStorage" text="Недостаточно места на Диске">
-              <router-link to="/settings#storage" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>View</router-link>
+              <router-link to="/settings#storage" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>Показать</router-link>
             </notification>
           </transition>
 
           <!-- High CPU temperature -->
           <transition name="notification-transition" appear>
             <notification v-if="isRunningHot" text="Перегрев Вашего сервера">
-              <router-link to="/settings#temperature" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>View</router-link>
+              <router-link to="/settings#temperature" class="btn btn-sm btn-alert-glass rounded-pill px-3 mr-2 mr-sm-3" pill>Показать</router-link>
             </notification>
           </transition>
 
