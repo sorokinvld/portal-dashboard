@@ -31,7 +31,7 @@
               {{ communityAppStore.name }} каталог
             </h1>
             <p class="text-muted mb-0">
-              Discover and install apps from the {{ communityAppStore.name }} App Store
+              Исследуйте и устанавливайте приложения из {{ communityAppStore.name }} Каталога приложений
             </p>
             <div class="block w-100 py-3"></div>
           </div>
