@@ -22,7 +22,7 @@
       />
       <div class="login-button-container">
         <transition name="slide-up-fade-transition">
-          <small class="mt-2 text-white error" v-show="isIncorrectPassword">Incorrect password</small>
+          <small class="mt-2 text-white error" v-show="isIncorrectPassword">Неверный пароль</small>
         </transition>
         <transition name="slide-up-transition">
           <b-button
