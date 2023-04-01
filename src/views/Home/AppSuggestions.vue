@@ -55,7 +55,7 @@
     <router-link
       :to="{name: 'app-store'}"
       class="btn btn-sm rounded-pill btn-success text-uppercase mt-3 font-weight-bold px-3 py-2 mx-auto text-center"
-    >View more in app store</router-link>
+    >Найти больше в Магазине приложений</router-link>
   </div>
 </div>
 </template>
