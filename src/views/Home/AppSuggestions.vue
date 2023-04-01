@@ -1,7 +1,7 @@
 <template>
 <div class="">
   <div class="app-suggestions-container d-flex flex-column align-items-center mx-auto px-2 py-4 px-sm-4">
-    <h2 class="app-suggestions-heading text-center mb-1">Install your first app</h2>
+    <h2 class="app-suggestions-heading text-center mb-1">Установите Ваше первое приложение</h2>
     <b-row>
       <b-col
         v-for="suggestion in suggestions" 
@@ -70,15 +70,15 @@ export default {
     return {
       suggestions: [
         {
-          title: "For the bitcoiner",
+          title: "Для криптоэнтузиастов",
             apps: ['bitcoin', 'lightning', 'mempool', 'thunderhub', 'electrs'],
         },
         {
-          title: "For the self-hoster",
+          title: "Для управления данными",
             apps: ['nextcloud', 'home-assistant', 'pi-hole', 'tailscale', 'uptime-kuma'],
         },
         {
-          title: "For the streamer",
+          title: "Для развлечений",
             apps: ['plex', 'jellyfin', 'transmission', 'sonarr', 'radarr'],
         },
       ]
