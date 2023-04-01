@@ -360,14 +360,14 @@
           <div v-show="!isCheckingForUpdate">
             <span v-show="!availableUpdate.version">
               <b-icon icon="check-circle-fill" variant="success"></b-icon>
-              <small class="ml-1" style="opacity: 0.4">Ваша Ноосфера имеют последнюю версию</small>
+              <small class="ml-1" style="opacity: 0.4">Ваш Портал имеет последнюю версию</small>
             </span>
             <div v-show="availableUpdate.version">
               <span class="d-block">
                 <b-icon icon="bell-fill" variant="success"></b-icon>
                 <small
                   class="text-muted ml-1"
-                >Версия Ноосферы {{availableUpdate.version}} доступна для установки</small>
+                >Версия Портала {{availableUpdate.version}} доступна для установки</small>
               </span>
               <b-button
                 class="mt-2"
@@ -658,7 +658,7 @@ export default {
         return;
       }
       this.$bvToast.toast(
-        `You've successfully changed your Umbrel's password`,
+        `Вы успешно изменили пароль к Вашему Порталу`,
         {
           title: "Password Changed",
           autoHideDelay: 3000,
@@ -727,7 +727,7 @@ export default {
         });
       }
       // Get user consent first
-      const approved = window.confirm("Are you sure you want to shutdown your Umbrel?");
+      const approved = window.confirm("Вы уверены, что хотите выключить Портал?");
       if (!approved) {
         return;
       }
@@ -743,7 +743,7 @@ export default {
       } catch (e) {
         toastText = "Shutdown failed";
         toastOptions.title =
-          "Something went wrong and Umbrel was not able to shutdown";
+          "Что-то пошло не так, Портал не желает отключаться";
         toastOptions.variant = "danger";
       }
       this.$bvToast.toast(toastText, toastOptions);
@@ -761,7 +761,7 @@ export default {
       }
       // Reset any cached hasRebooted value from previous reboot
       this.$store.commit("system/setHasRebooted", false);
-      const approved = window.confirm("Are you sure you want to restart your Umbrel?");
+      const approved = window.confirm("Вы уверены, что хотите перезагрузить свой Портал?");
       if (!approved) {
         return;
       }
@@ -770,7 +770,7 @@ export default {
         await this.$store.dispatch("system/reboot");
       } catch (e) {
         this.$bvToast.toast("Reboot failed", {
-          title: "Something went wrong and Umbrel was not able to reboot",
+          title: "Что-то пошло не так, Портал не желает перезагружаться",
           autoHideDelay: 3000,
           variant: "danger",
           solid: true,
@@ -779,7 +779,7 @@ export default {
       }
     },
     async toggleRemoteTorAccessSwitch() {
-      if(!window.confirm("Are you sure?\n\nThis will restart your Umbrel and it may take a few minutes.")) {
+      if(!window.confirm("Вы уверены?\n\nВаш Портал перезагрузится, это займет пару минут.")) {
         return;
       }
       try {
@@ -787,7 +787,7 @@ export default {
         await this.$store.dispatch("system/rebootHasBegun");
       } catch (e) {
         this.$bvToast.toast("Error", {
-          title: "Something went wrong and the setting could not be changed.",
+          title: "Что-то пошло не так, настройки не изменились.",
           autoHideDelay: 3000,
           variant: "danger",
           solid: true,
