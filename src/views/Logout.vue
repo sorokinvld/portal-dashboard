@@ -2,7 +2,7 @@
   <div class="p-sm-2">
     <div class="my-3 pb-2">
       <h1>logout</h1>
-      <p class="text-muted">Not gunna leave you too soon 😉</p>
+      <p class="text-muted">До встречи 😉</p>
     </div>
     <b-row></b-row>
   </div>
