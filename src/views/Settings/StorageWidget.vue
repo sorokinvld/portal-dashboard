@@ -1,6 +1,6 @@
 <template>
   <card-widget
-      header="Storage"
+      header="Диск"
       :status="cardStatus"
     >
     <div class="card-custom-body">
@@ -43,17 +43,17 @@
             :variant="isRunningLowOnStorage ? (isStorageFull ? 'danger' : 'warning') : 'success'"
           ></b-progress>
           <div class="text-right">
-            <small class="text-muted">{{ readableSize(storage.total - storage.used) }} available</small>
+            <small class="text-muted">{{ readableSize(storage.total - storage.used) }} доступно</small>
           </div>
 
           <b-alert v-if="isRunningLowOnStorage" :variant="isStorageFull ? 'danger' : 'warning'" class="mt-3" show>
-            <small>Consider uninstalling some apps or upgrading to a larger drive.</small>
+            <small>Рекомендуется удалить некоторые приложения или увеличить размер Диска.</small>
           </b-alert>
         </div>
         <div class="pt-1">
             <b-link v-b-toggle.storage-breakdown-collapse class="card-link primary-link px-3 px-xl-4">
-              <span class="when-closed">View usage</span>
-              <span class="when-open">Hide usage</span>
+              <span class="when-closed">Показать занятое пространство</span>
+              <span class="when-open">Скрыть занятое пространство</span>
             </b-link>
             <div class="pb-4"></div>
             <b-collapse id="storage-breakdown-collapse">
@@ -72,13 +72,13 @@
                     />
                     <div class="w-100">
                       <div class="d-flex justify-content-between align-items-baseline">
-                        <span v-if="app.id === 'umbrel'">System
+                        <span v-if="app.id === 'umbrel'">Система
                           <!-- <b-icon icon="info-circle-fill" style="opacity: 0.4" variant="dark" class="ml-1" v-b-tooltip.hover.bottom title="Including Bitcoin Core, LND, and Electrum server"></b-icon> -->
                         </span>
                         <span v-else>{{ app.name }}</span>
 
                         <!-- There's an edge case where a negative value may be returned by the API -->
-                        <small v-if="app.used < 0" class="text-muted">Calculating...</small>
+                        <small v-if="app.used < 0" class="text-muted">Вычисление...</small>
                         <small v-else class="text-muted">{{ readableSize(app.used) }}</small>
                       </div>
                       <b-progress
