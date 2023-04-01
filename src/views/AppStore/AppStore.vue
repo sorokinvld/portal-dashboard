@@ -19,16 +19,16 @@
             fill="#C3C6D1"
           />
         </svg>
-        <small class="text-uppercase">Back to Umbrel App Store</small></b-link>
+        <small class="text-uppercase">Вернуться в Магазин приложений</small></b-link>
 
         <!-- Community app store header -->
         <div class="d-flex justify-content-between align-items-center">
           <div v-if="communityAppStoreId">
             <b-badge pill variant="primary" class="mb-1">
-              Community App Store
+              Каталог приложений партнеров
             </b-badge>
             <h1 class="text-lowercase">
-              {{ communityAppStore.name }} App Store
+              {{ communityAppStore.name }} каталог
             </h1>
             <p class="text-muted mb-0">
               Discover and install apps from the {{ communityAppStore.name }} App Store
@@ -38,8 +38,8 @@
 
           <!-- Official app store header -->
           <div v-else>
-            <h1 class="text-lowercase">App Store</h1>
-            <p class="text-muted mb-0">Add super powers to your Umbrel with amazing self-hosted applications</p>
+            <h1 class="text-lowercase">Магазин приложений</h1>
+            <p class="text-muted mb-0">Получите максимум возможностей от установки самостоятельных приложений на свой Портал</p>
             <!-- Search  -->
             <div
               class="search-input-container mt-3 mb-2 d-flex align-items-center"
@@ -53,7 +53,7 @@
                 ref="searchInput"
                 class="search-input"
                 type="text"
-                placeholder="Search apps"
+                placeholder="Поиск приложений"
                 v-model="appStoreSearchQuery"
                 @input="onTypeAppStoreSearchQuery"
               ></b-input>
@@ -104,7 +104,7 @@
                   />
                 </svg>
               </template>
-              <b-dropdown-item href="#" v-b-modal.community-app-stores-modal><b-badge pill variant="primary" class="mr-1">New</b-badge> Community App Stores</b-dropdown-item>
+              <b-dropdown-item href="#" v-b-modal.community-app-stores-modal><b-badge pill variant="primary" class="mr-1">New</b-badge> Каталоги приложений партнеров</b-dropdown-item>
             </b-dropdown>
 
             <b-modal id="community-app-stores-modal" size="lg" body-class="py-0 px-2" header-class="mb-0 pb-0" centered hide-footer>
@@ -133,7 +133,7 @@
                     </a>
                   </div>
                   <div class="d-flex align-items-center justify-content-between w-100 px-2 px-lg-3">
-                    <h2 class="text-lowercase">Community App Stores</h2>
+                    <h2 class="text-lowercase">Каталоги приложений партнеров</h2>
                   </div>
                 </div>
               </template>
@@ -191,7 +191,7 @@
 
     <!-- No results found -->
     <div v-else-if="!communityAppStoreId && appStoreSearchQuery && !appStoreSearchResults.length && !isTypingAppStoreSearchQuery" class="w-100">
-      <p class="text-muted">No results found</p>
+      <p class="text-muted">Приложений не найдено</p>
       <transition name="no-search-results-transition" appear>
         <img class="no-search-results-image d-block mt-5 mx-auto" src="@/assets/no-search-results.gif" />
       </transition>
@@ -249,9 +249,9 @@
       >
       <div class="px-3 px-lg-4 py-3">
         <span class="rocket ml-3 ml-lg-4">🚀</span>
-        <h4 class="font-weight-normal mt-4">Get your app on the Umbrel App Store</h4>
+        <h4 class="font-weight-normal mt-4">Найдите свое приложение в Магазине приложений Портала</h4>
         <p class="text-muted mb-3">
-          Use any programming language, database or framework to build your app for Umbrel.
+          Используйте любой язык программирования,базы данных или фреймворк, чтобы создать свое собственное приложение для Портала.
         </p>
         <b-link class="primary-link" href="https://github.com/getumbrel/umbrel-apps/blob/master/README.md" target="_blank">Learn more</b-link>
       </div>
@@ -284,7 +284,7 @@
             </a>
           </div>
           <div class="d-flex align-items-center justify-content-between w-100 px-2 px-lg-3">
-            <h2 class="mr-auto text-lowercase">Updates</h2>
+            <h2 class="mr-auto text-lowercase">Обновления</h2>
             <b-button variant="outline-primary" class="px-2" size="sm" @click="updateAll" v-show="canUpdateAll && !isUpdatingAll">Update all</b-button>
           </div>
         </div>
