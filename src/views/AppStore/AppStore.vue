@@ -53,7 +53,7 @@
                 ref="searchInput"
                 class="search-input"
                 type="text"
-                placeholder="Поиск приложений"
+                placeholder="Поиск"
                 v-model="appStoreSearchQuery"
                 @input="onTypeAppStoreSearchQuery"
               ></b-input>
