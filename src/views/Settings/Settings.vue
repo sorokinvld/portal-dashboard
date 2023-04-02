@@ -205,7 +205,7 @@
                 <div class="py-2"></div>
                 <b-alert variant="warning" show>
                   <small>
-                    ⚠ Запомните, тут нет возможности восстановить пароль. Если вы забудете пароль, вы потеряете доступ к своей Ноосфере.
+                    ⚠ Запомните, тут нет возможности восстановить пароль. Если вы забудете пароль, вы потеряете доступ к своему Порталу.
                   </small>
                 </b-alert>
                 <b-button
@@ -354,7 +354,7 @@
         </div>
         <div class="px-3 px-xl-4 pb-4">
           <div class="w-100 d-flex justify-content-between mb-1">
-            <span class="align-self-end">Версия Ноосферы</span>
+            <span class="align-self-end">Версия Портала</span>
             <span class="font-weight-normal mb-0">{{ version }}</span>
           </div>
           <div v-show="!isCheckingForUpdate">
