@@ -24,7 +24,7 @@
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
               <span class="d-block">Двухфакторная аутентификация</span>
-              <small class="d-block" style="opacity: 0.4">Дополнительный уровень защиты вашего аккаунта</small>
+              <small class="d-block" style="opacity: 0.4">Дополнительный уровень защиты Вашего аккаунта</small>
             </div>
             <toggle-switch
               class="align-self-center"
@@ -131,7 +131,7 @@
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
               <span class="d-block">Пароль</span>
-              <small class="d-block" style="opacity: 0.4">Изменить ваш пароль входа</small>
+              <small class="d-block" style="opacity: 0.4">Изменить Ваш пароль входа</small>
             </div>
 
             <b-button
@@ -193,7 +193,7 @@
                 />
                 <div v-if="otpEnabled" class="py-2">
                   <label> 
-                    Введите ваш код для двухфакторной аутентификации
+                    Введите Ваш код для двухфакторной аутентификации
                   </label>
                   <input-otp-token
                     :success="isCorrectOtp"
@@ -226,7 +226,7 @@
               <small
                 class="d-block"
                 style="opacity: 0.4"
-              >Удаленный доступ к вашей системе из любого места с помощью браузера Tor {{remoteTorAccess && onionAddress ? 'on this URL' : ''}}</small>
+              >Удаленный доступ к Вашей системе из любого места с помощью браузера Tor {{remoteTorAccess && onionAddress ? 'on this URL' : ''}}</small>
             </div>
             <toggle-switch
               class="align-self-center"
@@ -276,7 +276,7 @@
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
               <span class="d-block">Перезагрузить</span>
-              <small class="d-block" style="opacity: 0.4">Перезагрузить вашу систему</small>
+              <small class="d-block" style="opacity: 0.4">Перезагрузить Вашу систему</small>
             </div>
 
             <b-button variant="outline-primary" size="sm" @click="rebootPrompt">Перезагрузить</b-button>
